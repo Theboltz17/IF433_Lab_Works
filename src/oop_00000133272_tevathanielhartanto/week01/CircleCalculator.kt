@@ -2,12 +2,12 @@ package oop_001_johnthor.week01
 
 fun main(args: Array<String>) {
 
-    var radius: Double = 7.0
-    var pi: Double = 3.14
+    val radius = 7.0
+    val pi = 3.14
 
-    var area: Double = pi * radius * radius
+    val area = pi * radius * radius
 
-    println("Radius: " + radius + ", Area: " + area)
+    println("Radius: $radius, Area: $area")
 
     checkSize(area)
 }
