@@ -47,4 +47,31 @@ fun main() {
     } else {
         println("Pilihan ngawur, pendaftaran batal!")
     }
+
+    // Library input system
+
+    println("\n Library Fine System")
+
+    print("Masukkan Judul Buku: ")
+    val bookTitle = scanner.nextLine()
+
+    print("Masukkan Nama Peminjam: ")
+    val borrower = scanner.nextLine()
+
+    print("Masukkan Durasi Peminjaman (Hari): ")
+    var duration = scanner.nextInt()
+
+    // Validasi Logika
+    if (duration < 0) {
+        println("Durasi peminjaman tidak boleh minus, otomatis berubah menjadi 1 hari.")
+        duration = 1
+    }
+
+    val loan = Loan(bookTitle, borrower, duration)
+
+    println("\nDetail Peminjaman")
+    println("Judul Buku         : ${loan.bookTitle}")
+    println("Peminjam           : ${loan.borrower}")
+    println("Durasi Peminjaman  : ${loan.loanDuration} hari")
+    println("Harga Denda        : Rp ${loan.calculateFine()}")
 }
