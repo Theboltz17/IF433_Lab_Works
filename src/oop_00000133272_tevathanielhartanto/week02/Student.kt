@@ -5,5 +5,13 @@ class Student (
     val nim: String,
     var major: String
 ){
-    // Body class kosong dulu
+    init {
+        // Validasi Sederhana: Cek panjang NIM
+        if (nim.length != 5) {
+            println("WARNING_: Objek tercipta dengan NIM ($nim) yqang tidak valid!")
+            println("Data mahasiswa $name mungkin akan bermasalah di sistem.")
+        } else {
+            println("LOG: Objek Student $name berhasil dialokasikan di Memory.")
+        }
+    }
 }
