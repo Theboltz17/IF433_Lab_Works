@@ -3,7 +3,8 @@ package oop_00000133272_tevathanielhartanto.week02
 class Student (
     val name: String,
     val nim: String,
-    var major: String
+    var major: String,
+    var gpa: Double = 0.0, // <-- Default Argument
 ){
     init {
         // Validasi Sederhana: Cek panjang NIM
@@ -16,7 +17,7 @@ class Student (
     }
     // Secondary Constructor
     // Wajib memanggil Primary menggunakan 'this()'
-    constructor(name: String, nim: String) : this(name, nim, "Non-Matriculated") {
+    constructor(name: String, nim: String) : this(name, nim, major = "Non-Matriculated") {
         println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan). ")
     }
 }
