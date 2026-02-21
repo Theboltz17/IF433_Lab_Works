@@ -1,4 +1,4 @@
-package oop_00000133272_tevathanielhartanto.Meet03
+package oop_00000133272_tevathanielhartanto.materi03
 
 class Demo {
     init { print("A") }
