@@ -34,5 +34,18 @@ fun main() {
         println("Luas Persegi Panjang (4x5): ${mathHelper.hitungLuas(4, 5)}")
         println("Luas Lingkaran (r=7): ${mathHelper.hitungLuas(7.0)}")
         println()
+
+        println(" TEST PAYMENT SYSTEM")
+
+        val eWallet = EWallet("Teva Wallet", 50000.0)
+        val creditCard = CreditCard("Teva Card", 100000.0)
+
+        val paymentMethods: List<PaymentMethod> = listOf(eWallet, creditCard)
+
+        for (payment in paymentMethods) {
+
+            payment.processPayment(75000.0)
+            println()
+        }
     }
 }
