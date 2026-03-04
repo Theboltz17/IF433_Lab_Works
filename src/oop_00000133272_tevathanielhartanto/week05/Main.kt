@@ -26,5 +26,13 @@ fun main() {
             }
         }
         println("-----------------------")
+
+        println(" TEST OVERLOADING ")
+        val mathHelper = MathHelper()
+
+        println("Luas Persegi (4): ${mathHelper.hitungLuas(4)}")
+        println("Luas Persegi Panjang (4x5): ${mathHelper.hitungLuas(4, 5)}")
+        println("Luas Lingkaran (r=7): ${mathHelper.hitungLuas(7.0)}")
+        println()
     }
 }
