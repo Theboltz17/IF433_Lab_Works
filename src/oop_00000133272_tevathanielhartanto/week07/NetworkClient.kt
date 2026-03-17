@@ -12,6 +12,6 @@ class NetworkClient private constructor(val urL: String) {
     }
 
     fun connect() {
-        println("Connectiong to $url...")
+        println("Connectiong to $BASE_URL...")
     }
 }
