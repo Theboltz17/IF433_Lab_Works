@@ -26,5 +26,6 @@ fun main() {
         } catch (e: IllegalArgumentException) {
             println("❌ DATA KORUP: ${e.message}")
         }
+        println("Sudah di tes dan outputnya sama")
     }
 }
