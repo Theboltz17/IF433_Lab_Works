@@ -11,4 +11,6 @@ fun main() {
         TradeLog("SOLUSDT", "SHORT", 10,  -2.1,  "OPEN")
     )
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
+
+    val winningTrades = closedTrades.filter { it.roe > 0 }
 }
