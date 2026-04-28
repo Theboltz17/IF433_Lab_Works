@@ -20,4 +20,5 @@ fun main() {
 
     println("\n--- TRANSACTION LIST ---")
     txRepo.getAll().forEach { println("ID: ${it.id} | Amount: ${it.amount}") }
+    // Status, Coin list, dan Transaction List muncul
 }
