@@ -4,7 +4,14 @@ import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
 
+data class siswa(val nama:String, val umur:Int, val ipk:Double)
+fun siswa.toCSV():String = "$nama, $umur, $ipk"
+
 fun main() {
+    val murid = siswa("Budi", 20, 3.8)
+    println(murid.toCSV())
+    val fileBuat2 = File("src/oop_00000133272_tevathanielhartanto/week13/fileSaya.csv")
+
     //baca file - cara1
     println("=== Cara1 Baca File ===")
     val fileSaya = File("src/oop_00000133272_tevathanielhartanto/materi13/contohfile.txt")
