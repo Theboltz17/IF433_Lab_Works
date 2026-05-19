@@ -51,5 +51,10 @@ fun main() {
     fileBuat.appendText("\n" + contohList.joinToString("\n"))
 
     println("\n=== Cara2 Buat File ===")
-    fileBuat.printWriter()
+    fileBuat.printWriter().use{
+        out->
+        out.println("Ini contoh baris pertama pakai printWritter, 20, 3.8")
+        out.println("Ini contoh baris kedua pakai printWritter, 20, 3.8")
+        out.println("baris ketiga pakai printWritter, 20, 3.8")
+    }
 }
