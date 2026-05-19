@@ -1,0 +1,3 @@
+Ini contoh baris pertama pakai printWritter, 20, 3.8
+Ini contoh baris kedua pakai printWritter, 20, 3.8
+baris ketiga pakai printWritter, 20, 3.8
