@@ -9,8 +9,17 @@ fun siswa.toCSV():String = "$nama, $umur, $ipk"
 
 fun main() {
     val murid = siswa("Budi", 20, 3.8)
-    println(murid.toCSV())
+
+    //simpan banyak value - pake List
+    val dataSiswa = listOf(
+        siswa("Udin", 20, 3.1)
+        siswa("Linda", 21, 3.7)
+        siswa("Toni", 22, 3.67)
+    )
+    val data = println(dataSiswa.joinToString( "\n"))
+
     val fileBuat2 = File("src/oop_00000133272_tevathanielhartanto/week13/fileSaya.csv")
+    fileBuat2.writeText(data)
 
     //baca file - cara1
     println("=== Cara1 Baca File ===")
