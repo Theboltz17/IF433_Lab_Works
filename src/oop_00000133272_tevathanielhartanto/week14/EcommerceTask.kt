@@ -60,3 +60,32 @@ class SafeOrderProcessor(
         notifier.sendNotification(itemName)
     }
 }
+
+interface PricingStrategy {
+    fun calculate(price: Double): Double
+}
+
+class RegularPricing : PricingStrategy {
+    override fun calculate(price: Double) = price
+}
+
+class VipPricing : PricingStrategy {
+    override fun calculate(price: Double) = price * 0.90
+}
+
+fun main() {
+    println("=== BAD ORDER PROCESSOR ===")
+    val bad = BadOrderProcessor()
+    bad.processOrder("Laptop", 15000000.0, "VIP")
+
+    println("\n=== SAFE ORDER PROCESSOR (SOLID) ===")
+    val repo     = CsvOrderRepository()
+    val notifier = EmailNotifier()
+    val safe     = SafeOrderProcessor(repo, notifier)
+
+    val vipPricing     = VipPricing()
+    val regularPricing = RegularPricing()
+
+    safe.processOrder("Laptop",    vipPricing.calculate(15000000.0),     "VIP")
+    safe.processOrder("Headphone", regularPricing.calculate(500000.0), "REGULAR")
+}
